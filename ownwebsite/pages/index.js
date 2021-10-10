@@ -1,28 +1,26 @@
+import React, { Component, useState, useEffect } from "react";
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Hero from '../components/Hero'
+import Footer from './Footer'
+import Hero from './Hero'
+import About from './About'
+import Contact from './Contact'
+import Subscribe from './Subscribe'
 
 export default function Home() {
-  return (
-    
-    <div className="h-[800px] ">
+
+  return (    
+    <div className="h-screen scroll-snap-y">
       <Head>
         <title>Only a Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Hero as Background*/}
-      <div className="relative inset-0 h-full w-full bg-hero-pattern bg-cover">
-        <div className='absolute inset-0 bg-gray-900 bg-opacity-30'>
-          <Navbar/>
-          <Hero/>
 
+      <Hero/>
+      <About/>
+      <Subscribe/>
+      <Contact/>
+      <Footer/> 
 
-          <Footer/> 
-        </div>
-      </div>
-  
-    </div>
-      
+    </div>    
   )
 }
